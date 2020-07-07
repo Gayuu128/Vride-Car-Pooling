@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 align="center">V-RIDE CAR POOLING</h1>
+<div class="pull-right">
+  <a href="login.html">SIGN IN /SIGN UP</a>
+</div>
+
+<div class="container" id="container">
+<div class="form-container sign-up-container">
+<div class="container">
+  <h2>Search for ride</h2>
+   <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+<form action="">
+	<h1>Rider</h1>
+	
+	<div class="container">
+<div class="jumbotron">
+  <h2>Car riding details</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Car number</th>
+        <th>starting point</th>
+        <th>Ending point</th>
+        <th>Date</th>
+        <th>Starting timing</th>
+        <th>Ending timing</th>
+        <th>Available seats</th>
+        <th>Email</th>
+        <th>Select</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>John</td>
+        <td>11111</td>
+        <td>virtusa DLF</td>
+        <td>Avadi</td>
+        <td>01/02/2020</td>
+        <td>9:00 AM</td>
+         <td>6:00 PM</td>
+         <td>3</td>
+        <td>john@gmail.com</td> 
+         <td>
+
+       <button type="button" class="btn btn-warning">
+        <a href="login.html">Enter</a>
+    </button>
+      </td>
+
+      </tr>
+      <tr>
+        <td>Mary</td>
+         <td>11111</td>
+        <td>virtusa DLF</td>
+        <td>chennai</td>
+         <td>01/02/2020</td>
+        <td>9:00 AM</td>
+         <td>6:00 PM</td>
+         <td>3</td>
+        <td>mary@gmail.com</td>
+ <td>
+        <button type="button" class="btn btn-warning">
+        <a href="login.html">Enter</a>
+    </button>
+      </td>
+      </tr>
+      <tr>
+        <td>July</td>
+         <td>11111</td>
+        <td>virtusa State Highway 49A</td>
+        <td>shollingnallur</td>
+         <td>01/02/2020</td>
+        <td>9:00 AM</td>
+         <td>6:00 PM</td>
+         <td>3</td>
+        <td>july@gmail.com</td>
+ <td>
+        <button type="button" class="btn btn-warning">
+        <a href="login.html">Enter</a>
+    </button>
+      </td>
+      </tr>
+<tr>
+        <td>Jerom</td>
+         <td>11111</td>
+        <td>virtusa DLF</td>
+        <td>omr</td>
+         <td>01/02/2020</td>
+        <td>9:00 AM</td>
+         <td>6:00 PM</td>
+         <td>3</td>
+        <td>mary@gmail.com</td>
+ <td>
+        <button type="button" class="btn btn-warning">
+        <a href="login.html">Enter</a>
+    </button>
+      </td>
+      </tr>
+<tr>
+        <td>Revathi</td>
+         <td>11111</td>
+        <td>virtusa DLF</td>
+        <td>Arakkonam</td>
+         <td>01/02/2020</td>
+        <td>9:00 AM</td>
+         <td>6:00 PM</td>
+         <td>3</td>
+        <td>revathi@gmail.com</td>
+ <td>
+        <button type="button" class="btn btn-warning">
+        <a href="login.html">Enter</a>
+    </button>
+      </td>
+      </tr>
+<tr>
+        <td>swetha</td>
+         <td>11111</td>
+        <td>virtusa State Highway 49A</td>
+        <td>omr</td>
+         <td>01/02/2020</td>
+        <td>9:00 AM</td>
+         <td>6:00 PM</td>
+         <td>3</td>
+        <td>swetha@gmail.com</td>
+ <td>
+        <button type="button" class="btn btn-warning">
+        <a href="login.html">Enter</a>
+    </button>
+      </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
